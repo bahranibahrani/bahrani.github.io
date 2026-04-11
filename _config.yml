@@ -22,7 +22,7 @@ title_separator          : "Bahrani's Blog" # separator between title and page t
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Bahrani"
 description              : "Blog catatan pribadi untuk berbagi pengetahuan dan pengalaman tentang Network Engineering, DevOps, dan System Administration."
-url                      : "https://bahrani.github.io"
+url                      : "https://bahrani.my.id"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "bahranibahrani/bahrani.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"

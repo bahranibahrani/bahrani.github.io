@@ -4,7 +4,7 @@ Blog catatan pribadi untuk berbagi pengetahuan dan pengalaman tentang **Network 
 
 ## 🚀 Live Site
 
-👉 **[https://bahrani.github.io](https://bahrani.github.io)**
+👉 **[https://bahrani.my.id](https://bahrani.my.id)**
 
 ## 🛠️ Tech Stack
 
