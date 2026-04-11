@@ -1,9 +1,310 @@
 ---
 # Only the main Sass file needs front matter (the dashes are enough)
-search: false
 ---
-
 @charset "utf-8";
 
-@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
-@import "minimal-mistakes"; // main partials
+@import "minimal-mistakes";
+
+/* ============================================
+   CUSTOM STYLES - Bahrani's Blog
+   ============================================ */
+
+/* --- Avatar Bulat Sempurna --- */
+.author__avatar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+
+.author__avatar img {
+  width: 180px !important;
+  height: 180px !important;
+  max-width: 180px !important;
+  max-height: 180px !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  border-radius: 50% !important;
+  border: 4px solid #ffffff !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.author__avatar img:hover {
+  transform: scale(1.05) !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* --- Author Name --- */
+.author__name {
+  font-size: 1.3em !important;
+  font-weight: 700 !important;
+  margin-bottom: 0.3em !important;
+  letter-spacing: 0.02em;
+}
+
+/* --- Author Bio --- */
+.author__bio {
+  font-size: 0.85em !important;
+  line-height: 1.6 !important;
+  color: #555 !important;
+  margin-bottom: 0.8em !important;
+}
+
+/* --- Author Location --- */
+.author__pronouns,
+.author__location {
+  font-size: 0.82em !important;
+  color: #777 !important;
+  margin-bottom: 0.3em !important;
+}
+
+/* --- Social Links di Sidebar --- */
+.author__urls {
+  padding-top: 0.8em !important;
+  border-top: 1px solid #eee !important;
+}
+
+.author__urls li {
+  margin-bottom: 0.5em !important;
+}
+
+.author__urls a {
+  font-size: 0.88em !important;
+  transition: color 0.2s ease !important;
+}
+
+.author__urls a:hover {
+  color: #2a7ae2 !important;
+  text-decoration: none !important;
+}
+
+/* --- Halaman Beranda --- */
+.page__hero {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* --- Cards / Archive List --- */
+.list__item:hover {
+  background: #fafafa;
+}
+
+/* --- Footer Links --- */
+.page__footer-follow li a {
+  transition: opacity 0.2s ease !important;
+}
+
+.page__footer-follow li a:hover {
+  opacity: 0.7 !important;
+}
+
+/* --- Masthead Navigation --- */
+.masthead {
+  background: #ffffff !important;
+  border-bottom: 1px solid #eee !important;
+  box-shadow: none !important;
+}
+
+.masthead__menu {
+  padding: 0 !important;
+}
+
+.masthead__menu-wrap {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.masthead__menu .site-title {
+  font-size: 1.2em !important;
+  font-weight: 700 !important;
+  color: #2a7ae2 !important;
+}
+
+.masthead__menu .site-title:hover {
+  color: #1a5fb4 !important;
+}
+
+.greedy-nav .visible-links a {
+  font-size: 0.88em !important;
+  font-weight: 500 !important;
+  color: #555 !important;
+  padding: 0.3em 0.8em !important;
+  transition: color 0.2s ease !important;
+}
+
+.greedy-nav .visible-links a:hover {
+  color: #2a7ae2 !important;
+}
+
+/* --- Search --- */
+.search__toggle {
+  transition: color 0.2s ease !important;
+}
+
+/* --- Content Area - Compact Spacing --- */
+.page {
+  padding-top: 0.5em !important;
+}
+
+.page__content {
+  padding-top: 0.3em !important;
+}
+
+.page__content p {
+  line-height: 1.6 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0.6em !important;
+}
+
+.page__content h1 {
+  margin-top: 0.3em !important;
+  margin-bottom: 0.3em !important;
+}
+
+.page__content h2 {
+  margin-top: 0.6em !important;
+  margin-bottom: 0.3em !important;
+  padding-bottom: 0.15em;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.page__content h3 {
+  margin-top: 0.5em !important;
+  margin-bottom: 0.2em !important;
+}
+
+.page__content h4 {
+  margin-top: 0.4em !important;
+  margin-bottom: 0.2em !important;
+}
+
+.page__content ul,
+.page__content ol {
+  margin-top: 0.2em !important;
+  margin-bottom: 0.5em !important;
+}
+
+.page__content li {
+  margin-bottom: 0.2em !important;
+}
+
+.page__content blockquote {
+  margin-top: 0.3em !important;
+  margin-bottom: 0.5em !important;
+  padding: 0.3em 0.8em !important;
+}
+
+.archive__item {
+  padding: 0.2em 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.archive__item-title {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  font-size: 1em !important;
+}
+
+.archive__item-excerpt {
+  margin-top: 0 !important;
+  margin-bottom: 0.1em !important;
+  font-size: 0.82em !important;
+}
+
+.archive__item-teaser {
+  margin-bottom: 0.2em !important;
+}
+
+/* --- List items spacing --- */
+.list__item {
+  padding: 0.2em 0 !important;
+  margin-bottom: 0 !important;
+  border-bottom: 1px solid #f0f0f0 !important;
+}
+
+.entries-list .list__item {
+  padding: 0.3em 0 !important;
+}
+
+.entries-list {
+  margin-top: 0.3em !important;
+}
+
+/* --- Footer Reduced Spacing --- */
+.page__footer {
+  padding-top: 1em !important;
+  padding-bottom: 1em !important;
+}
+
+.page__footer-follow {
+  margin-bottom: 0.5em !important;
+}
+
+.page__footer-copyright {
+  margin-top: 0.3em !important;
+  font-size: 0.75em !important;
+}
+
+/* --- Responsive: Mobile --- */
+@media (max-width: 768px) {
+  .sidebar {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 1.5em 1em !important;
+  }
+
+  .author__avatar {
+    display: none !important;
+  }
+
+  .author__name {
+    text-align: center !important;
+    margin-top: 0 !important;
+    margin-bottom: 0.4em !important;
+    clear: both !important;
+    overflow: visible !important;
+  }
+
+  .author__bio {
+    text-align: center !important;
+    font-size: 0.82em !important;
+    margin-top: 0.5em !important;
+    margin-bottom: 0.5em !important;
+    clear: both !important;
+    display: block !important;
+  }
+
+  .author__pronouns,
+  .author__location {
+    text-align: center !important;
+  }
+
+  .author__urls {
+    text-align: center !important;
+    padding-top: 0.6em !important;
+  }
+
+  .author__urls ul {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 0.3em 0.8em !important;
+    padding: 0 !important;
+    list-style: none !important;
+  }
+
+  .author__urls li {
+    margin-bottom: 0.2em !important;
+  }
+
+  .masthead__menu {
+    padding: 0.15em 0 !important;
+  }
+
+  .greedy-nav .visible-links a {
+    font-size: 0.82em !important;
+    padding: 0.2em 0.5em !important;
+  }
+}
