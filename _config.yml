@@ -115,7 +115,7 @@ analytics:
 # Site Author
 author:
   name             : "Bahrani"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/bahrani.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Network Engineer | DevOps | System Administrator"
   location         : "Indonesia"
   email            :
