@@ -1,9 +1,21 @@
 main:
   - title: "Beranda"
     url: /
+    icon: "fas fa-home"
+    description: "Kembali ke halaman utama"
   - title: "Tentang"
     url: /about/
+    icon: "fas fa-user"
+    description: "Tentang penulis blog"
   - title: "Kategori"
     url: /categories/
+    icon: "fas fa-folder"
+    description: "Daftar kategori artikel"
   - title: "Tags"
     url: /tags/
+    icon: "fas fa-tags"
+    description: "Semua tag artikel"
+  - title: "Arsip"
+    url: /archive/
+    icon: "fas fa-archive"
+    description: "Arsip semua artikel"

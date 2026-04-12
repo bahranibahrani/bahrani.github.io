@@ -9,6 +9,233 @@
    CUSTOM STYLES - Bahrani's Blog
    ============================================ */
 
+/* --- CSS Variables untuk Color Scheme --- */
+:root {
+  --primary-color: #2a7ae2;
+  --secondary-color: #1a5fb4;
+  --accent-color: #ff6b6b;
+  --text-dark: #2c3e50;
+  --text-light: #7f8c8d;
+//  --bg-light: #f8f9fa;
+  --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+/* --- Custom Typography --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif !important;
+  line-height: 1.7 !important;
+  color: var(--text-dark) !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif !important;
+  font-weight: 700 !important;
+  color: var(--text-dark) !important;
+  margin-bottom: 1rem !important;
+}
+
+h1 {
+  font-size: 2.5rem !important;
+  line-height: 1.2 !important;
+  position: relative !important;
+  padding-bottom: 0.5rem !important;
+}
+
+h1::after {
+  content: '' !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  width: 60px !important;
+  height: 4px !important;
+  background: var(--accent-color) !important;
+  border-radius: 2px !important;
+}
+
+/* --- Drop cap untuk paragraph pertama --- */
+.page__content > p:first-child::first-letter {
+  font-family: 'Playfair Display', serif !important;
+  font-size: 4rem !important;
+  font-weight: 700 !important;
+  line-height: 3rem !important;
+  float: left !important;
+  margin: 0.2rem 0.8rem 0 0 !important;
+  color: var(--primary-color) !important;
+}
+
+/* --- Enhanced Links --- */
+.page__content a {
+  color: var(--primary-color) !important;
+  text-decoration: none !important;
+  border-bottom: 2px solid transparent !important;
+  transition: all 0.3s ease !important;
+}
+
+.page__content a:hover {
+  color: var(--secondary-color) !important;
+  border-bottom-color: var(--accent-color) !important;
+}
+
+/* --- Enhanced Masthead Navigation --- */
+.masthead {
+  background: linear-gradient(135deg, rgba(42, 122, 226, 0.95), rgba(26, 95, 180, 0.95)) !important;
+  border-bottom: none !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+  padding: 0.5rem 0 !important;
+}
+
+.masthead__inner-wrap {
+  padding: 0.5rem 1rem !important;
+  max-width: 100% !important;
+  overflow: hidden !important;
+}
+
+.masthead__menu .site-title {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  margin-right: 1rem !important;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+}
+
+.greedy-nav {
+  background: transparent !important;
+  display: flex !important;
+  align-items: center !important;
+  flex-wrap: nowrap !important;
+}
+
+.greedy-nav .visible-links {
+  display: flex !important;
+  align-items: center !important;
+  flex-wrap: nowrap !important;
+  gap: 0.2rem !important;
+}
+
+.greedy-nav .visible-links a {
+  color: rgba(255, 255, 255, 0.9) !important;
+  padding: 0.4rem 0.6rem !important;
+  white-space: nowrap !important;
+  font-size: 0.9rem !important;
+  flex-shrink: 0 !important;
+}
+
+.greedy-nav .visible-links a:hover {
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-radius: 4px;
+}
+
+.greedy-nav .visible-links li {
+  margin: 0 !important;
+  flex-shrink: 0 !important;
+}
+
+.greedy-nav .visible-links li:last-child a {
+  margin-right: 0 !important;
+}
+
+/* --- Navigation Hover Effect --- */
+.masthead__menu-item {
+  position: relative;
+}
+
+.masthead__menu-item::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent-color);
+  transition: width 0.3s ease;
+}
+
+.masthead__menu-item:hover::after {
+  width: 100%;
+}
+
+/* --- Hide search button if navigation is too long --- */
+@media (max-width: 1024px) {
+  .search__toggle {
+    display: none !important;
+  }
+}
+
+/* --- Code Styling --- */
+code, pre {
+  font-family: 'JetBrains Mono', monospace !important;
+  background: var(--bg-light) !important;
+  border-radius: 4px !important;
+  //padding: 0.0rem 0.4rem !important;
+  font-size: 0.9em !important;
+}
+
+/* --- Enhanced Page Hero --- */
+.page__hero {
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
+  margin-bottom: 3rem !important;
+}
+
+.page__hero--overlay {
+  background: var(--gradient-1) !important;
+  border-radius: 16px !important;
+  overflow: hidden !important;
+}
+
+/* --- Enhanced Archive Items --- */
+.archive__item {
+  background: #ffffff !important;
+  border-radius: 12px !important;
+  padding: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+  transition: all 0.3s ease !important;
+  border: 1px solid #f0f0f0 !important;
+}
+
+.archive__item:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+.archive__item-teaser img {
+  border-radius: 8px !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.archive__item-teaser img:hover {
+  transform: scale(1.05) !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* --- Category Cards --- */
+.category-list {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+  gap: 1.5rem !important;
+  margin: 2rem 0 !important;
+}
+
+.category-card {
+  background: var(--gradient-1) !important;
+  color: white !important;
+  padding: 2rem !important;
+  border-radius: 12px !important;
+  text-align: center !important;
+  transition: transform 0.3s ease !important;
+  cursor: pointer !important;
+}
+
+.category-card:hover {
+  transform: translateY(-4px) !important;
+}
+
 /* --- Avatar Bulat Sempurna --- */
 .author__avatar {
   display: flex;
@@ -78,17 +305,6 @@
   text-decoration: none !important;
 }
 
-/* --- Halaman Beranda --- */
-.page__hero {
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-/* --- Cards / Archive List --- */
-.list__item:hover {
-  background: #fafafa;
-}
-
 /* --- Footer Links --- */
 .page__footer-follow li a {
   transition: opacity 0.2s ease !important;
@@ -96,44 +312,6 @@
 
 .page__footer-follow li a:hover {
   opacity: 0.7 !important;
-}
-
-/* --- Masthead Navigation --- */
-.masthead {
-  background: #ffffff !important;
-  border-bottom: 1px solid #eee !important;
-  box-shadow: none !important;
-}
-
-.masthead__menu {
-  padding: 0 !important;
-}
-
-.masthead__menu-wrap {
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-}
-
-.masthead__menu .site-title {
-  font-size: 1.2em !important;
-  font-weight: 700 !important;
-  color: #2a7ae2 !important;
-}
-
-.masthead__menu .site-title:hover {
-  color: #1a5fb4 !important;
-}
-
-.greedy-nav .visible-links a {
-  font-size: 0.88em !important;
-  font-weight: 500 !important;
-  color: #555 !important;
-  padding: 0.3em 0.8em !important;
-  transition: color 0.2s ease !important;
-}
-
-.greedy-nav .visible-links a:hover {
-  color: #2a7ae2 !important;
 }
 
 /* --- Search --- */
@@ -194,11 +372,6 @@
   padding: 0.3em 0.8em !important;
 }
 
-.archive__item {
-  padding: 0.2em 0 !important;
-  margin-bottom: 0 !important;
-}
-
 .archive__item-title {
   margin-top: 0 !important;
   margin-bottom: 0 !important;
@@ -243,6 +416,85 @@
 .page__footer-copyright {
   margin-top: 0.3em !important;
   font-size: 0.75em !important;
+}
+
+/* --- Performance Optimization --- */
+img {
+  content-visibility: auto !important;
+  contain-intrinsic-size: 300px !important;
+}
+
+/* --- Critical CSS above the fold --- */
+.critical-css {
+  display: none !important;
+}
+
+@media screen and (max-width: 768px) {
+  .critical-css {
+    display: block !important;
+  }
+}
+
+/* --- Accessibility Enhancements --- */
+.skip-link {
+  position: absolute !important;
+  top: -40px !important;
+  left: 0 !important;
+  background: var(--primary-color) !important;
+  color: white !important;
+  padding: 8px !important;
+  text-decoration: none !important;
+  border-radius: 0 0 4px 0 !important;
+}
+
+.skip-link:focus {
+  top: 0 !important;
+}
+
+/* --- Focus indicators --- */
+a:focus, button:focus, input:focus, textarea:focus {
+  outline: 2px solid var(--accent-color) !important;
+  outline-offset: 2px !important;
+}
+
+/* --- High contrast mode support --- */
+@media (prefers-contrast: high) {
+  :root {
+    --primary-color: #0066cc !important;
+    --accent-color: #ff0000 !important;
+  }
+}
+
+/* --- Reduced motion support --- */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* --- Dark mode support --- */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-dark: #e9ecef !important;
+    --text-light: #adb5bd !important;
+    --bg-light: #212529 !important;
+  }
+  
+  body {
+    background-color: #121212 !important;
+    color: #e9ecef !important;
+  }
+  
+  .archive__item {
+    background: #1e1e1e !important;
+    border-color: #333333 !important;
+  }
+  
+  .page__content h2 {
+    border-bottom-color: #333333 !important;
+  }
 }
 
 /* --- Responsive: Mobile --- */
@@ -306,5 +558,53 @@
   .greedy-nav .visible-links a {
     font-size: 0.82em !important;
     padding: 0.2em 0.5em !important;
+  }
+
+  /* --- Enhanced Mobile Optimization --- */
+  .author__avatar img {
+    width: 120px !important;
+    height: 120px !important;
+  }
+  
+  .page__content {
+    padding: 1rem !important;
+  }
+  
+  .toc {
+    position: relative !important;
+    top: 0 !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  .category-list {
+    grid-template-columns: 1fr !important;
+  }
+  
+  h1 {
+    font-size: 2rem !important;
+  }
+  
+  .masthead__menu .site-title {
+    font-size: 1rem !important;
+  }
+
+  /* --- Touch-friendly buttons --- */
+  .btn {
+    padding: 0.8rem 1.5rem !important;
+    border-radius: 8px !important;
+    font-size: 1rem !important;
+    touch-action: manipulation !important;
+    min-height: 44px !important;
+    min-width: 44px !important;
+  }
+
+  /* --- Enhanced mobile archive items --- */
+  .archive__item {
+    padding: 1rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .archive__item-title {
+    font-size: 1.1rem !important;
   }
 }
