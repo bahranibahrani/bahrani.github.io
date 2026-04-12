@@ -15,7 +15,3 @@ main:
     url: /tags/
     icon: "fas fa-tags"
     description: "Semua tag artikel"
-  - title: "Arsip"
-    url: /archive/
-    icon: "fas fa-archive"
-    description: "Arsip semua artikel"
