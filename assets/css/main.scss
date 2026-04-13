@@ -641,3 +641,25 @@ body.dark-mode .page__footer { background: #1a1a1a !important; color: #b0b0b0 !i
 body.dark-mode .page__footer a { color: #64b5f6 !important; }
 body.dark-mode .masthead__menu .site-title { color: #ffffff !important; }
 body.dark-mode .greedy-nav .visible-links a { color: rgba(255,255,255,0.85) !important; }
+
+/* --- Mobile Dropdown Theme Toggle --- */
+.theme-toggle-dropdown {
+  display: flex !important;
+  align-items: center !important;
+  background: none !important;
+  border: none !important;
+  color: inherit !important;
+  cursor: pointer !important;
+  font-size: 0.9rem !important;
+  padding: 0.5rem 1rem !important;
+  width: 100% !important;
+  text-align: left !important;
+}
+
+.theme-toggle-dropdown:hover {
+  opacity: 0.8 !important;
+}
+
+.dropdown-theme-toggle {
+  list-style: none !important;
+}
