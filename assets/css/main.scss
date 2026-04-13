@@ -474,29 +474,6 @@ a:focus, button:focus, input:focus, textarea:focus {
   }
 }
 
-/* --- Dark mode support --- */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text-dark: #e9ecef !important;
-    --text-light: #adb5bd !important;
-    --bg-light: #212529 !important;
-  }
-  
-  body {
-    background-color: #121212 !important;
-    color: #e9ecef !important;
-  }
-  
-  .archive__item {
-    background: #1e1e1e !important;
-    border-color: #333333 !important;
-  }
-  
-  .page__content h2 {
-    border-bottom-color: #333333 !important;
-  }
-}
-
 /* --- Responsive: Mobile --- */
 @media (max-width: 768px) {
   .sidebar {
@@ -608,3 +585,59 @@ a:focus, button:focus, input:focus, textarea:focus {
     font-size: 1.1rem !important;
   }
 }
+
+/* ============================================
+   DARK MODE TOGGLE & THEME
+   ============================================ */
+
+/* --- Theme Toggle Button --- */
+.theme-toggle {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  border-radius: 50% !important;
+  width: 36px !important;
+  height: 36px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  color: #ffffff !important;
+  font-size: 1rem !important;
+  margin-left: 0.5rem !important;
+  padding: 0 !important;
+  transition: all 0.3s ease !important;
+}
+
+.theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.3) !important;
+  transform: rotate(20deg) !important;
+}
+
+/* --- Smooth transitions --- */
+body, .page__content, .archive__item, .sidebar, .page__footer, .masthead, code, pre, blockquote, .list__item {
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease !important;
+}
+
+/* --- DARK MODE --- */
+body.dark-mode { background-color: #121212 !important; color: #e0e0e0 !important; }
+body.dark-mode .masthead { background: linear-gradient(135deg, #1a1a2e, #16213e) !important; }
+body.dark-mode .page__content, body.dark-mode .page { background-color: #121212 !important; color: #e0e0e0 !important; }
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4 { color: #ffffff !important; }
+body.dark-mode .page__content h2 { border-bottom-color: #333 !important; }
+body.dark-mode .page__content a { color: #64b5f6 !important; }
+body.dark-mode .page__content a:hover { color: #90caf9 !important; }
+body.dark-mode .archive__item { background: #1e1e1e !important; border-color: #333 !important; }
+body.dark-mode .archive__item-title a { color: #e0e0e0 !important; }
+body.dark-mode .archive__item-excerpt { color: #b0b0b0 !important; }
+body.dark-mode .sidebar { background: #1e1e1e !important; }
+body.dark-mode .author__name { color: #ffffff !important; }
+body.dark-mode .author__bio { color: #b0b0b0 !important; }
+body.dark-mode .author__urls { border-top-color: #333 !important; }
+body.dark-mode .author__urls a { color: #64b5f6 !important; }
+body.dark-mode code, body.dark-mode pre { background: #2a2a2a !important; color: #f8f8f2 !important; }
+body.dark-mode .list__item { border-bottom-color: #333 !important; }
+body.dark-mode blockquote { color: #b0b0b0 !important; border-left-color: #555 !important; }
+body.dark-mode .page__footer { background: #1a1a1a !important; color: #b0b0b0 !important; }
+body.dark-mode .page__footer a { color: #64b5f6 !important; }
+body.dark-mode .masthead__menu .site-title { color: #ffffff !important; }
+body.dark-mode .greedy-nav .visible-links a { color: rgba(255,255,255,0.85) !important; }
