@@ -158,11 +158,15 @@ h1::after {
   width: 100%;
 }
 
-/* --- Hide search button if navigation is too long --- */
-@media (max-width: 1024px) {
-  .search__toggle {
-    display: none !important;
-  }
+/* --- Show search button on all screen sizes --- */
+.search__toggle {
+  color: #ffffff !important;
+  font-size: 1rem !important;
+  margin-left: 0.5rem !important;
+}
+
+.search__toggle:hover {
+  opacity: 0.8 !important;
 }
 
 /* --- Code Styling --- */
